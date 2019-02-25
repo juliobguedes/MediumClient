@@ -1,3 +1,10 @@
 {
-    "extends": "airbnb"
+    "extends": ["airbnb", "plugin:flowtype/recommended"],
+    "plugins": ["flowtype"],
+    "ecmaFeatures": {
+        "jsx": true
+    },
+    "env": {
+        "browser": true
+    }
 }
