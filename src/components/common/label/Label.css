@@ -1,0 +1,18 @@
+:root {
+  --fontFamily: "Dosis", sans-serif;
+  --fontSizeSm: 1.2rem;
+  --fontSizeMd: 1.6rem;
+  --fontSizeLg: 2.1rem;
+  --fontSizeXl: 2.8rem;
+  --fontSizeXx: 3.6rem;
+}
+
+p {
+  font-size: var(--inputFontSize);
+  padding-left: 2.5vw;
+}
+
+.fix-margins {
+  margin-bottom: 1vh;
+  margin-top: 1vh;
+}

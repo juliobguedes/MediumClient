@@ -1,10 +1,14 @@
 import React from 'react';
-import { Input, Label } from '../common';
+import { InputLabel } from '../common';
+
+import './App.css';
 
 const App = () => (
-  <div>
-    <Label />
-    <Input placeholder="Your first name, e.g. Júlio" />
+  <div className="form-w">
+    <InputLabel
+      placeholder="Your First Name e.g. Júlio"
+      label="Name"
+    />
   </div>
 );
 

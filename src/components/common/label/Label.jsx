@@ -1,7 +1,17 @@
-import React from 'react';
+/* @flow */
 
-const Label = () => (
-  <div>a</div>
+import React from 'react';
+import './Label.css';
+
+type LabelProps = {
+  labelName: String,
+}
+
+const Label = ({ labelName }: LabelProps) => (
+  <p className="fix-margins">
+    {labelName}
+    :
+  </p>
 );
 
 export default Label;

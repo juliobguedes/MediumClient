@@ -25,7 +25,7 @@
   /* floated labels */
   --inputPaddingV: var(--gutterMd);
   --inputPaddingH: var(--gutterLg);
-  --inputFontSize: var(--fontSizeLg);
+  --inputFontSize: var(--fontSizeMd);
   --inputLineHeight: var(--lineHeightMd);
   --labelScaleFactor: 0.8;
   --labelDefaultPosY: 50%;
@@ -58,7 +58,8 @@
   font-size: var(--inputFontSize);
   font-weight: inherit;
   line-height: var(--inputLineHeight);
-  border: 2px solid orange;
+  border: 1px solid orange;
+  border-radius: 4px;
   transition: box-shadow var(--transitionDuration);
 }
 
