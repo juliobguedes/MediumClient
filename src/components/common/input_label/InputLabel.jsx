@@ -11,7 +11,7 @@ type InputLabelProps = {
 };
 
 const App = ({ label, placeholder, TypeInput }: InputLabelProps) => (
-  <div className="form-w">
+  <div>
     <Label labelName={label} />
     <TypeInput placeholder={placeholder} />
   </div>
