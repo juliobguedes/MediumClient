@@ -8,12 +8,15 @@ type InputLabelProps = {
   label: String,
   placeholder: String,
   TypeInput: Component,
+  updateText: (text: String) => void,
 };
 
-const App = ({ label, placeholder, TypeInput }: InputLabelProps) => (
+const App = ({
+  updateText, label, placeholder, TypeInput,
+}: InputLabelProps) => (
   <div>
     <Label labelName={label} />
-    <TypeInput placeholder={placeholder} />
+    <TypeInput updateText={updateText} placeholder={placeholder} />
   </div>
 );
 

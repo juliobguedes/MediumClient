@@ -5,11 +5,20 @@ import './Input.css';
 
 type InputProps = {
   placeholder: String,
+  value: String,
+  updateText: (text: String) => void,
 };
 
-const Input = ({ placeholder }: InputProps) => (
+const Input = ({ updateText, value, placeholder }: InputProps) => (
   <div className="input-div">
-    <input type="text" id="input" className="input-text" placeholder={placeholder} />
+    <input
+      type="text"
+      id="input"
+      value={value}
+      onChange={updateText}
+      className="input-text"
+      placeholder={placeholder}
+    />
   </div>
 );
 

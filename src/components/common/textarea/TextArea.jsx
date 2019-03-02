@@ -5,11 +5,15 @@ import './TextArea.css';
 
 type TextAreaProps = {
   placeholder: String,
+  value: String,
+  updateText: (text: String) => void,
 };
 
-const TextArea = ({ placeholder }: TextAreaProps) => (
+const TextArea = ({ updateText, value, placeholder }: TextAreaProps) => (
   <textarea
     placeholder={placeholder}
+    value={value}
+    onChange={updateText}
     className="textarea-text"
   />
 );
