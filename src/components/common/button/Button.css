@@ -2,7 +2,6 @@
   -webkit-appearance: button;
   font-weight: 400;
   width: 50%;
-  float: right;
   border: 1px solid transparent;
   border-radius: 4px;
   line-height: 1.42857143;
@@ -19,4 +18,52 @@
 .btn-primary:active {
   background-color: #286090;
   border-color: #204d74;
+}
+
+.btn-alert {
+  color: white;
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+
+.btn-alert:active {
+  background-color: #ec971f;
+  border-color: #d58512;
+}
+
+.btn-danger {
+  color: white;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+
+.btn-danger:active {
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+
+.btn-default {
+  color: #333;
+  background-color: white;
+  border-color: #ccc;
+}
+
+.btn-default:active {
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+
+.btn-success {
+  color: white;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+
+.btn-success:active {
+  background-color: #449d44;
+  border-color: #398439;
+}
+
+.btn-block {
+  width: 100%;
 }

@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   InputLabel, Clap, TextArea, Input, Button,
 } from '../common';
+import axiosInstance from '../../lib/axiosInstance';
 
 import './Form.css';
 
@@ -18,9 +19,11 @@ class Form extends Component {
         link: '', comment: '', clap: false, rating: 0,
       },
     };
+
     this.updateRating = this.updateRating.bind(this);
     this.updateLink = this.updateLink.bind(this);
     this.updateComment = this.updateComment.bind(this);
+    this.submitForm = this.submitForm.bind(this);
   }
 
   updateRating(newRating: Number) {
@@ -41,6 +44,12 @@ class Form extends Component {
     this.setState(fields);
   }
 
+  submitForm() {
+    const { fields } = this.state;
+    console.log(fields);
+    axiosInstance.post('/director', fields).then(response => console.log(response));
+  }
+
   render() {
     const { fields } = this.state;
     const {
@@ -57,7 +66,7 @@ class Form extends Component {
           </div>
           <Rating className="half-right" emptySymbol={(<FontAwesomeIcon icon={{ prefix: 'far', iconName: 'star' }} />)} fullSymbol={<FontAwesomeIcon icon="star" />} fractions={2} initialRating={rating} onChange={this.updateRating} />
         </div>
-        <Button classCSS="btn-primary" submit={() => console.log(fields)}>
+        <Button classCSS="btn-primary pull-right" submit={() => this.submitForm()}>
           Add note
         </Button>
       </div>
